@@ -1,0 +1,238 @@
+@charset "UTF-8";
+@import url('https://fonts.googleapis.com/css2?family=Titillium+Web:wght@200&display=swap');/*Fonte do Google Fonts*/
+@font-face {
+    font-family: 'fonteLogo'; /*Nome da fonte definida*/
+    src: url("../_fonts/bubblegum-sans-regular.otf"); /*Nome do Arquivo da fonte*/
+}
+/* Formatação do texto e fundo da pagina*/
+body{
+    background-color: #dddd;
+    color: rgb(0, 0, 0);
+    font-family: 'Times New Roman', Times, serif
+}
+div#interface{
+    width: 900px;
+    background-color: white;
+    margin: -20px /*Emcima*/ auto /* Direita*/ 0px/*Embaixo*/ auto /*esquerda*/;
+    box-shadow: 0px/*lateral*/ 0px/*vertical*/ 10px/*espalhamento*/ rgba(0, 0, 0, .5);
+    padding:10px;
+}
+header#cabecalho img#icone{
+    position: absolute;
+    right: 190px;
+    top: 70px;
+}
+header#cabecalho{
+    border-bottom: 1px black solid;
+    height: 150px; /*Altura*/
+}
+header#cabecalho img{
+    margin-left: 10px;
+}
+header#cabecalho h1{
+    font-family: 'fonteLogo', Helvetica, sans-serif;
+    font-size: 30pt;
+    color: #606060;
+    text-shadow: 1px 1px 1px black;
+    padding: 0px;
+    margin-bottom: 0px;
+}
+header#cabecalho h2{
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 15pt;
+    color: #6d6a6ada;
+    padding: 0px;
+    margin-top: 0px;
+}
+p{
+    text-align: justify; text-indent: 50px;
+}
+a{
+    color: #606060;
+    text-decoration: none;
+}
+a:hover{
+    text-decoration: underline;
+    color: blue;
+}
+/*Formatação de imagens com legendas*/
+figure.foto-legenda{
+    position: relative;
+    border: 6px solid white;
+    display: inline-block;
+    box-shadow: 1px 1px 4px black;
+}
+figure.foto-legenda img{
+    width: 100%;
+    height: 100%;
+}
+figure.foto-legenda figcaption{
+    opacity: 0;
+    position: absolute;
+    top: 0px;
+    background-color: rgba(0, 0, 0, 0.4);
+    color: white;
+    width: 50%;
+    right: 50%;
+    padding: 10px;
+    box-sizing: border-box;
+    transition: 1s;
+}
+figure.foto-legenda:hover figcaption{
+    opacity: 1;
+}
+
+/*Formatação do menu*/
+nav#menu{
+    display: block;
+}
+
+nav#menu ul{
+    list-style: none;
+    text-transform: uppercase;
+    position: absolute;
+    top: -10px;
+    left: 500px;
+}
+nav#menu li{
+    display: inline;
+    background-color: rgb(228, 227, 227);
+    padding: 10px;
+    margin: 2px;
+
+}
+nav#menu li:hover{
+    background-color: #606060;
+    transition: background-color 1s;
+}
+nav#menu h1{
+    display: none;
+}
+nav#menu a{
+    color: black;
+    text-decoration: none;
+}
+nav#menu a:hover{
+    color: white;
+    text-decoration: underline;
+}
+/*Formatação da tabela*/
+table#tabela{
+    border: 1px solid #606060;
+    border-spacing: 0px;
+    margin-left: auto;
+    margin-right: auto;
+}
+table#tabela td{
+    border: 1px solid #606060;
+    padding: 10px;
+}
+table#tabela td.esq{
+    text-align: center;
+    font-weight: 800;
+    background-color: #e4e4e4;
+    vertical-align: auto;
+}
+table#tabela td.dir{
+    text-align: left;
+    background-color: #e4e4e4;
+}
+table#tabela td.cen{
+    text-align: center;
+    color: white;
+    background-color:#606060;
+    font-weight: 800;
+}
+table#tabela caption{
+    color: #636262;
+    font-size: 13pt;
+    font-weight: bolder;
+}
+table#tabela span{
+    display: block;
+    float: right;
+    font-size: 10px;
+    color: black;
+    margin-top: 10px;
+}
+/*Fortação do cabeçalho do artigo*/
+header#cab-artigo h1{
+    font-family: 'fonteLogo';
+    font-size: 20pt;
+    color: #606060;
+    margin-bottom: 0px;
+    margin-top: 0px;
+}
+header#cab-artigo h2.dif{
+    font-size: 13pt;
+    color: #978f8f;
+    background-color: #ffffff;
+    margin: 0px;
+}
+header#cab-artigo h3{
+    font-size: 12px;
+    color: #606060;
+}
+.mov{
+    text-align: right;
+}
+/*Formatação do artigo*/
+article#noticia-principal h2{
+    font-size: 13pt;
+    color: #606060;
+    background-color: #dddd;
+    padding: 5px 0px 5px 10px;
+    margin: 10px 0px 10px 0px;
+}
+/*Configurando as divisões*/
+section#corpo{
+    display: block;
+    width: 500px;
+    float: left;
+    border-right: 1px/*largura*/ solid/*tipo*/ #606060;
+    padding-right: 20px;
+}
+aside#lateral{
+    display: block;
+    width: 350px;
+    float: right;
+    background-color: #dddddd;
+    padding: 10px;
+    margin-top: 10px;
+    box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.5);
+}
+aside#lateral h1{
+    font-family: 'fonteLogo';
+    color: #606060;
+    font-size: 20pt;
+    margin-top: 0px;
+}
+aside#lateral h2{
+    background-color: #606060;
+    color: white;
+    font-size: 13pt;
+    padding: 5px;
+}
+footer#rodape{
+    clear: both; /*Limpa a configuração dos dois lados: section e aside*/
+    border-top: 1px solid #606060;
+}
+footer#rodape p{
+    text-align: center;
+}
+footer#rodape a{
+    color: black;
+    text-decoration: none;
+}
+footer#rodape a:hover{
+    color: blue;
+    text-decoration: underline;
+}
+video#v1{
+    width: 100%;
+    margin-left: 5px;
+    margin-bottom: 5px;
+}
+video#v2{
+    width: 100%;
+}

@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tudo sobre Google Glass</title>
+    <link rel="stylesheet"  href="_css/estilo.css">
+    <link rel="stylesheet" href="_css/form.css">
+</head>
+<body>
+<div id="interface">
+
+    <header id="cabecalho">
+        <header>
+            <hgroup>
+                <h1>Google Glass</h1>
+                <h2>A revolução do Google está chegando</h2>
+                <img src="_imagens/glass-logo-peq.jpg" alt="logo">
+            </hgroup>
+        </header>
+        <img id="icone" src="_imagens/contato.png">
+
+        <nav id="menu">
+            <h1>Menu Principal</h1>
+            <ul>
+                <li onmouseover="mudaFoto('_imagens/home.png')" onmouseout="mudaFoto('_imagens/contato.png')"><a href="index.html">Home</a></li>
+                <li onmouseover="mudaFoto('_imagens/especificacoes.png')" onmouseout="mudaFoto('_imagens/contato.png')"><a href="specs.html">Especificações</a></li>
+                <li onmouseover="mudaFoto('_imagens/fotos.png')" onmouseout="mudaFoto('_imagens/contato.png')"><a href="fotos.html">Fotos</a></li>
+                <li onmouseover="mudaFoto('_imagens/multimidia.png')" onmouseout="mudaFoto('_imagens/contato.png')"><a href="multimidia.html">Multimídia</a></li>
+                <li onmouseover="mudaFoto('_imagens/contato.png')" onmouseout="mudaFoto('_imagens/contato.png')"><a href="fale-conosco.html">Fale conosco</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section>
+        <article id="noticia-principal">
+            <header id="cab-artigo">
+                <hgroup>
+                    <h3>Fale Conosco > Contato</h3>
+                    <h1>Formulário de Contato</h1>
+                    <h2 class="dif">por Caio Henrique</h2>
+                    <h3 class="mov">Atualizado em 14/Dezembro/2022</h3>
+                </hgroup>
+            </header>
+            <form action="outlook:caiogrechic50@gmail.com" oninput="calc_total();" method="post" id="form">
+                <fieldset id="iden-user"> <!--Conjunto de Campos-->
+                    <legend>Identificação do Usuário</legend>
+                    <p><label for="cNome">Nome:</label> <input type="text" name="tNome" id="cNome" size="20" maxlength="100" placeholder="Nome Completo"></p>
+                    <p><label for="cSenha">Senha: </label><input type="password" name="tSenha" id="cSenha" size="12" maxlength="12" placeholder="Digite sua Senha"></p>
+                    <p><label for="cEmail">E-mail:</label> <input type="email" name="tEmail" id="cEmail" size="20" maxlength="30" placeholder="Digite seu E-mail"></p>
+                    <!--size é o tamanho da caixa do form, maxlength é o maximo de caracteres, placeholder é o texto que vai aparecer na caixa do form-->
+                    <fieldset id="sexo">
+                       <legend> Sexo:</legend>
+                       <input type="radio" name="tSexo" id="cMasc"> <label for="cMasc">Masculino</label><br>
+                       <input type="radio" name="tSexo" id="cFem"> <label for="cFem">Feminino</label>
+                    </fieldset>
+                   <p> Data de Nascimento: <input type="date" name="tData" id="cData"> </p>
+                </fieldset>
+
+                <fieldset id="end">
+                    <legend>Endereço do Usuário</legend>
+                    <p><label for="cLog">Logradouro:</label> <input type="text" name="tLog" id="cLog" size="20" maxlength="100" placeholder="Digite o seu Logradouro"> </p>
+                    <p><label for="cNum">Número:</label> <input type="number" name="tNum" id="cNum" min="0" max="9999"></p>
+                    <p><label for="cEstado">Estado:</label>
+                    <select name="tEstado" id="cEstado">
+                        <optgroup label="Região Sul">
+                            <option value="PR">Paraná</option>
+                            <option value="RS">Rio Grande do Sul</option>
+                            <option value="SC">Santa Catarina</option>
+                        </optgroup>
+                        <optgroup label="Região Sudeste">
+                            <option value="SP">São Paulo</option>
+                            <option value="RJ">Rio de Janeiro</option>
+                            <option value="MG">Minas Gerais</option>
+                            <option value="ES">Espirito Santo</option>
+                        </optgroup>
+                        <optgroup label="Região Centro-Oeste">
+                            <option value="MT">Mato Grosso</option>
+                            <option value="MS">Mato Grosso do Sul</option>
+                            <option value="GO">Goiás</option>
+                            <option value="DF">Distrito Federal</option>
+                        </optgroup>
+                        <optgroup label="Região Nordeste">
+                            <option value="BH">Banhia</option>
+                            <option value="CE">Ceará</option>
+                            <option value="AL">Alagoas</option>
+                            <option value="SE">Sergipe</option>
+                            <option value="AL">Alagoas</option>
+                            <option value="MA">Maranhão</option>
+                            <option value="PB">Paraíba</option>
+                            <option value="PE">Pernambuco</option>
+                            <option value="PI">Piauí</option>
+                        </optgroup>
+                        <optgroup label="Região Norte">
+                            <option value="AM">Amazonas</option>
+                            <option value="AC">Acre</option>
+                            <option value="AP">Amapá</option>
+                            <option value="PA">Pará</option>
+                            <option value="RO">Rondônia</option>
+                            <option value="TO">Tocantins</option>
+                            <option value="RR">Roraima</option>
+                        </optgroup>
+                    </select></p>
+                    <!-- Select é uma tag especifica para regitrar estados, option são as opções que vão aparecer no form -->
+                    <p><label for="cCidade">Cidade:</label> <input type="text" name="tCidade" id="cCidade" size="20" maxlength="40" placeholder="Digite sua cidade"></p>
+                </fieldset>
+
+                <fieldset id="men-user">
+                    <legend>Mensagem do Usuário</legend>
+                    <p><label for="tGrau">Grau de Urgência:</label> Min <input type="range" name="tGrau" id="cGrau" min="0" max="10">Max</p>
+                    <p><label for="cMeng">Mensagem:</label> <textarea name="tMeng" id="cMeng" cols="35" rows="5" placeholder="Deixe aqui sua mensagem"></textarea></p>
+                </fieldset>
+
+                <fieldset id="pedido">
+                    <legend>Quero um Google Glass</legend>
+                    <p><input type="checkbox" name="tAd" id="cAd" checked> <label for="cAd">Gostaria de adquirir um Google Glass quando disponível</label></p>
+                    <p><label for="cCor">Cor:</label> <input type="color" name="tCor" id="cCor" value="#0000ff"></p>
+                    <p><label for="cQuant">Quantidade:</label> <input type="number" name="tQuant" id="cQuant" min="0" max="5"></p>
+                    <p><label for="cPt">Preço Total: R$</label> <input type="text" name="tPt" id="cPt" placeholder="Total a Pagar" readonly></p>
+                    <!-- readonly = Somente Leitura-->
+                </fieldset>
+
+                <input type="button" value="Enviar" id="env">
+            </form>
+        </article>
+    </section>
+    <footer id="rodape">
+        <p>Copyright &copy; 2022 - by Caio Henrique <br>
+            <a href="https://github.com/caio1459" target="_blank">Github</a>
+        <a href="http://instagram.com/cayo_henri/" target="_blank"> | Instagram</a>
+    </p>
+    </footer>
+
+    </div>
+    <script src="_javascript/funcoes.js"></script>
+</body>
+</html>

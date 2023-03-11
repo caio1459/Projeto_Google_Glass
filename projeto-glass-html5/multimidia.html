@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tudo sobre Google Glass</title>
+    <link rel="stylesheet"  href="_css/estilo.css">
+    <link rel="stylesheet" href="_css/media.css">
+    <script src="_javascript/funcoes.js"></script>
+</head>
+<body>
+<div id="interface">
+
+    <header id="cabecalho">
+        <header>
+            <hgroup>
+                <h1>Google Glass</h1>
+                <h2>A revolução do Google está chegando</h2>
+                <img src="_imagens/glass-logo-peq.jpg" alt="logo">
+            </hgroup>
+        </header>
+        <img id="icone" src="_imagens/multimidia.png">
+
+        <nav id="menu">
+            <h1>Menu Principal</h1>
+            <ul>
+                <li onmouseover="mudaFoto('_imagens/home.png')" onmouseout="mudaFoto('_imagens/multimidia.png')"><a href="index.html">Home</a></li>
+                <li onmouseover="mudaFoto('_imagens/especificacoes.png')" onmouseout="mudaFoto('_imagens/multimidia.png')"><a href="specs.html">Especificações</a></li>
+                <li onmouseover="mudaFoto('_imagens/fotos.png')" onmouseout="mudaFoto('_imagens/multimidia.png')"><a href="fotos.html">Fotos</a></li>
+                <li onmouseover="mudaFoto('_imagens/Multimidia.png')" onmouseout="mudaFoto('_imagens/multimidia.png')"><a href="multimidia.html">Multimídia</a></li>
+                <li onmouseover="mudaFoto('_imagens/contato.png')" onmouseout="mudaFoto('_imagens/multimidia.png')"><a href="fale-conosco.html">Fale conosco</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section>
+        <article id="noticia-principal">
+            <header id="cab-artigo">
+                <hgroup>
+                   <h3> Glass > Multimídia</h3>
+                    <h1> Sons e Vídeos</h1>
+                    <h2 class="dif">por Caio Henrique</h2>
+                    <h3 class="mov">Atualizado em 11/Dezembro/2022</h3>
+                </hgroup>
+            </header>
+            <div class="tv">
+                <audio src="_media/2009-lovers-carvings-bibio.mp3" id="musica" controls="controls"> <!--controls faz aparecer o player de musica-->
+                    <source type="audio/mpeg/">
+                </audio>
+                <video src="_media/getting-started.mp4" id="video" controls="controls" poster="_imagens/video-mini03.jpg">
+                    <source type="video/mp4/">
+                </video>
+            </div>
+        </article>
+    </section>
+
+<footer id="rodape">
+    <p>Copyright &copy; 2022 - by Caio Henrique <br>
+        <a href="https://github.com/caio1459" target="_blank">Github</a>
+    <a href="http://instagram.com/cayo_henri/" target="_blank"> | Instagram</a>
+    </p>
+</footer>
+
+</div>
+</body>
+</html>
